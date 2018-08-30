@@ -10,10 +10,11 @@ window.addEventListener('keydown',function (e) {
     // so because I am just looking for one element use 
    // querySelector if I was looking for many I would use querySelectorAll
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
 if (!audio) return // stop func from runnig all to gether
 audio.currentTime=0; // rewind to the start 
 audio.play();
-    console.log(audio)
+    console.log(key)
 });
 
 
