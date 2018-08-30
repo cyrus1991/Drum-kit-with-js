@@ -11,6 +11,7 @@ window.addEventListener('keydown',function (e) {
    // querySelector if I was looking for many I would use querySelectorAll
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
 if (!audio) return // stop func from runnig all to gether
+audio.currentTime=0; // rewind to the start 
 audio.play();
     console.log(audio)
 });
